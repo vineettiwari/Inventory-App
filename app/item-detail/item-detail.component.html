@@ -1,0 +1,55 @@
+<head>
+    <style>
+        .detail-title {
+            text-align: right;
+        }
+
+        .btn.btn-primary.back-btn {
+            margin-bottom: 20px;
+            margin-left: -12px;
+        }
+    </style>
+</head>
+
+<div class="jumbotron" *ngIf="selectedItem">
+
+    <a class="btn btn-primary back-btn" routerLink="home" role="button">Back</a>
+
+    <div class="row">
+        <ul class="list-group col-sm-4">
+            <li class="list-group-item detail-title">
+                <strong>Product ID</strong>
+            </li>
+            <li class="list-group-item detail-title">
+                <strong>Product Name</strong>
+            </li>
+            <li class="list-group-item detail-title">
+                <strong>Manufacturer</strong>
+            </li>
+            <li class="list-group-item detail-title">
+                <strong>Quantity</strong>
+            </li>
+            <li class="list-group-item detail-title">
+                <strong>Pack Size</strong>
+            </li>
+        </ul>
+
+        <ul class="list-group col-sm-8">
+            <li class="list-group-item">
+                {{ selectedItem.id }}
+            </li>
+            <li class="list-group-item">
+                {{ selectedItem.name }}
+            </li>
+            <li class="list-group-item">
+                {{ selectedItem.mfg }}
+            </li>
+            <li class="list-group-item">
+                {{ selectedItem.qty }}
+            </li>
+            <li class="list-group-item">
+                {{ selectedItem.pkg }}
+            </li>
+        </ul>
+    </div>
+</div>
